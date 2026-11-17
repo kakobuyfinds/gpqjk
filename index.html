@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>SuperBuy spreadsheet | CAFANS Finds &amp; Shipping Budget</title>
+<meta name="description" content="Browse CAFANS shoes, hoodies, tees and jackets with estimated USD prices. Compare sizes, check warehouse photos and estimate your SuperBuy order total.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SuperBuy spreadsheet | CAFANS Finds &amp; Shipping Budget">
+<meta property="og:description" content="Filter CAFANS finds and build a SuperBuy order budget before you buy.">
+<!-- Google and Bing submission is pending a public URL and verified site access. After deployment, use Google Search Console URL Inspection and Bing Webmaster Tools URL Submission. -->
+<style>
+:root{color-scheme:light;--ink:#172921;--green:#10392b;--paper:#f4f5eb;--line:#d7ded2;--muted:#506459}
+[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+a{color:var(--green);text-underline-offset:.2em}a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #227954;outline-offset:3px}
+.wrap{width:min(100% - 2rem,68rem);margin-inline:auto}
+.hero{text-align:center;background:var(--green);color:#fff;padding:clamp(3rem,9vw,7rem) 0}
+h1,h2,h3,p{margin:0 0 .65rem}h1,h2{line-height:1.12}h1{font:700 clamp(2.6rem,8vw,5.6rem)/1 Georgia,serif;letter-spacing:-.05em}h2{font:700 clamp(1.7rem,4vw,2.7rem)/1.12 Georgia,serif}
+.hero p{max-width:40rem;margin:1.3rem auto;color:#e0ebe2}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem}
+.button{display:inline-block;padding:.65rem 1.2rem;border-radius:.5rem;background:#d9f881;color:#172921;font-weight:700;text-decoration:none;border:1px solid #d9f881}.secondary{background:transparent;color:#fff}
+main{padding-block:2rem 3rem}section{margin-block:1rem 2.5rem}.panel{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:clamp(1rem,3vw,2rem)}
+.controls,.budget{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));margin-block:1rem}
+label{display:grid;gap:.25rem;font-weight:650}input,select{width:100%;font:inherit;padding:.5rem;border:1px solid #8b9a8e;border-radius:.35rem;background:white;color:var(--ink)}
+.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.7rem;border-bottom:1px solid var(--line)}thead{background:#e9efe4}td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.help,footer{color:var(--muted)}details{padding:.75rem 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:700}details p{margin:.55rem 0 0}output{font-size:1.35rem;font-weight:750}footer{text-align:center;padding:1rem;border-top:1px solid var(--line)}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"SuperBuy spreadsheet",
+  "inLanguage":"en",
+  "description":"A CAFANS product shortlist and a budget planner for shoppers comparing orders through SuperBuy."
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gpqjk/">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>SuperBuy spreadsheet</h1>
+    <p>Compare shoes, streetwear and outerwear from CAFANS. Shortlist your size, then factor in shipping before you place an order.</p>
+    <div class="actions">
+      <a class="button" href="https://cafans.com">SuperBuy spreadsheet</a>
+      <a class="button secondary" href="https://cafans.com">Buy it now</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <!-- Competitor references: https://superbuyspreadsheet.org/ focuses on link volume and updates; https://chinagrails.com/en/spreadsheet/agent/superbuy groups marketplace finds; https://rep.tools/guides/superbuy-spreadsheet explains the buying workflow. This page combines a crawlable source-linked shortlist with a cost calculator and a category-specific QC checklist. Google placement varies by locale; exact positions were not verified. -->
+  <section class="panel" aria-labelledby="catalog">
+    <h2 id="catalog">CAFANS product directory</h2>
+    <p class="help">Featured listings from CAFANS. Prices are estimates in USD from the catalog snapshot. Check the listing for current stock, variants and prices.</p>
+    <div class="controls" id="controls" hidden>
+      <label>Search products <input type="search" id="query" placeholder="Try slides or hoodie"></label>
+      <label>Category <select id="category"><option value="">All categories</option><option>Shoes</option><option>Hoodies &amp; sweatshirts</option><option>T-shirts</option><option>Jackets</option></select></label>
+    </div>
+    <p id="count" class="help" role="status"></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Est. USD</th></tr></thead>
+        <tbody id="products">
+          <tr><td><a href="https://cafans.com/goods-158791.html">Leather Slides</a></td><td>Shoes</td><td>$62.36</td></tr>
+          <tr><td><a href="https://cafans.com/goods-158790.html">Platform Slides</a></td><td>Shoes</td><td>$46.67</td></tr>
+          <tr><td><a href="https://cafans.com/goods-158792.html">Sweatshirt</a></td><td>Hoodies &amp; sweatshirts</td><td>$27.50</td></tr>
+          <tr><td><a href="https://cafans.com/goods-158280.html">Thug Club - Rock Hoodie</a></td><td>Hoodies &amp; sweatshirts</td><td>$37.22</td></tr>
+          <tr><td><a href="https://cafans.com/goods-158200.html">Unisex Embroidered Oversized T-Shirt</a></td><td>T-shirts</td><td>$32.64</td></tr>
+          <tr><td><a href="https://cafans.com/goods-158279.html">Corteiz Jacket</a></td><td>Jackets</td><td>$42.78</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="panel" aria-labelledby="cost">
+    <h2 id="cost">Estimate your SuperBuy order cost</h2>
+    <p>Enter amounts in USD. Use a shipping quote for your destination and add any applicable fees or taxes.</p>
+    <div class="budget">
+      <label>Item subtotal <input id="items" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+      <label>Domestic delivery <input id="domestic" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+      <label>International shipping <input id="shipping" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+      <label>Fees and taxes <input id="fees" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+    </div>
+    <p>Estimated total <output id="total" for="items domestic shipping fees" aria-live="polite">$0.00</output></p>
+    <noscript><p>Add the four amounts to estimate the total.</p></noscript>
+  </section>
+  <section aria-labelledby="guide">
+    <h2 id="guide">How to use the SuperBuy spreadsheet</h2>
+    <ol>
+      <li>Open a CAFANS listing and record the seller link, exact color, size and current item price. Confirm whether SuperBuy accepts the listing before paying.</li>
+      <li>Compare the seller’s size chart with an item you already own. For shoes, check the stated foot-length range. For tees and hoodies, compare chest width and body length. For jackets, allow room for layers.</li>
+      <li>If warehouse quality-check photos are available, match the variant and ask for a close-up of any unclear detail. Check shoe size labels, embroidery placement and jacket fasteners.</li>
+      <li>Compare shipping quotes after you have the parcel’s weight and dimensions. Check the shipping line’s billable weight, restrictions and any fees before confirming dispatch.</li>
+    </ol>
+  </section>
+  <section aria-labelledby="faq">
+    <h2 id="faq">SuperBuy spreadsheet FAQ</h2>
+    <details><summary>What is a SuperBuy spreadsheet?</summary><p>It is a shortlist of product listings used to compare items before ordering through a shopping agent. This page uses selected CAFANS listings for its product directory.</p></details>
+    <details><summary>Does the listed price include international shipping?</summary><p>The table shows estimated item prices in USD. Get a separate international shipping quote for the destination and parcel, then include any applicable fees in your budget.</p></details>
+    <details><summary>What if a listing changes or sells out?</summary><p>Check the current seller listing and your selected variant. If you choose a replacement listing, check its size chart and dispatch estimate again before ordering.</p></details>
+  </section>
+</main>
+<footer>Independent shopping guide. Product listings sourced from <a href="https://cafans.com">CAFANS</a>.</footer>
+<script>
+const controls = document.getElementById('controls');
+const query = document.getElementById('query');
+const category = document.getElementById('category');
+const rows = Array.from(document.querySelectorAll('#products tr'));
+const count = document.getElementById('count');
+
+function filterProducts() {
+  const term = query.value.trim().toLowerCase();
+  let visible = 0;
+  for (const row of rows) {
+    const matchesName = row.cells[0].textContent.toLowerCase().includes(term);
+    const matchesCategory = !category.value || row.cells[1].textContent === category.value;
+    row.hidden = !(matchesName && matchesCategory);
+    if (!row.hidden) visible += 1;
+  }
+  count.textContent = visible ? visible + ' of ' + rows.length + ' listings shown' : 'No matching listings.';
+}
+
+controls.hidden = false;
+query.addEventListener('input', filterProducts);
+category.addEventListener('change', filterProducts);
+filterProducts();
+
+const budget = document.querySelector('.budget');
+const amounts = Array.from(budget.querySelectorAll('input'));
+const total = document.getElementById('total');
+const dollars = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'});
+
+budget.addEventListener('input', () => {
+  if (amounts.some(input => !input.validity.valid)) {
+    total.textContent = 'Enter valid amounts in USD.';
+    return;
+  }
+  const cents = amounts.reduce((sum, input) => sum + Math.round((input.valueAsNumber || 0) * 100), 0);
+  total.textContent = dollars.format(cents / 100);
+});
+</script>
+</body>
+</html>
